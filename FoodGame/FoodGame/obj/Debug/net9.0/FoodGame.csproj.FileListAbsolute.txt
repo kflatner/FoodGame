@@ -1,0 +1,14 @@
+C:\Users\Meg\Desktop\Programering\Rider\Projects\FoodGame\FoodGame\bin\Debug\net9.0\FoodGame.exe
+C:\Users\Meg\Desktop\Programering\Rider\Projects\FoodGame\FoodGame\bin\Debug\net9.0\FoodGame.deps.json
+C:\Users\Meg\Desktop\Programering\Rider\Projects\FoodGame\FoodGame\bin\Debug\net9.0\FoodGame.runtimeconfig.json
+C:\Users\Meg\Desktop\Programering\Rider\Projects\FoodGame\FoodGame\bin\Debug\net9.0\FoodGame.dll
+C:\Users\Meg\Desktop\Programering\Rider\Projects\FoodGame\FoodGame\bin\Debug\net9.0\FoodGame.pdb
+C:\Users\Meg\Desktop\Programering\Rider\Projects\FoodGame\FoodGame\obj\Debug\net9.0\FoodGame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Meg\Desktop\Programering\Rider\Projects\FoodGame\FoodGame\obj\Debug\net9.0\FoodGame.AssemblyInfoInputs.cache
+C:\Users\Meg\Desktop\Programering\Rider\Projects\FoodGame\FoodGame\obj\Debug\net9.0\FoodGame.AssemblyInfo.cs
+C:\Users\Meg\Desktop\Programering\Rider\Projects\FoodGame\FoodGame\obj\Debug\net9.0\FoodGame.csproj.CoreCompileInputs.cache
+C:\Users\Meg\Desktop\Programering\Rider\Projects\FoodGame\FoodGame\obj\Debug\net9.0\FoodGame.dll
+C:\Users\Meg\Desktop\Programering\Rider\Projects\FoodGame\FoodGame\obj\Debug\net9.0\refint\FoodGame.dll
+C:\Users\Meg\Desktop\Programering\Rider\Projects\FoodGame\FoodGame\obj\Debug\net9.0\FoodGame.pdb
+C:\Users\Meg\Desktop\Programering\Rider\Projects\FoodGame\FoodGame\obj\Debug\net9.0\FoodGame.genruntimeconfig.cache
+C:\Users\Meg\Desktop\Programering\Rider\Projects\FoodGame\FoodGame\obj\Debug\net9.0\ref\FoodGame.dll
