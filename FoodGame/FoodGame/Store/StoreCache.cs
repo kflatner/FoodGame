@@ -7,7 +7,7 @@ public class StoreCache
         new Store
         {
             Id = 1,  
-            Name = "Big Bernies",  
+            Name = "Big Bernies Meat",  
             Type = StoreType.AmericanShop
         },
         new Store
