@@ -1,21 +1,15 @@
 using FoodGame.Grocerie;
-using FoodGame.Kitchen;
 
-namespace FoodGame.KitchenLogic
+namespace FoodGame.Kitchen
 {
-    public class Kitchen
+    public class Kitchen(Inventory inventory)
     {
-        private Inventory _inventory;
-
-        public Kitchen(Inventory inventory)
-        {
-            _inventory = inventory;
-        }
-
         public void Open()
         {
+            
             while (true)
             {
+                Console.Clear();
                 Console.WriteLine("\n--- Kitchen ---");
                 Console.WriteLine("1. View Recipes");
                 Console.WriteLine("2. View Inventory");
@@ -47,11 +41,12 @@ namespace FoodGame.KitchenLogic
 
         private void ShowAllRecipes()
         {
+            Console.Clear();
             Console.WriteLine("\n--- All Recipes ---");
 
             foreach (var recipe in RecipeCache.AllRecipes)
             {
-                Console.WriteLine($"\n {recipe.Name} → {recipe.Result}");
+                Console.WriteLine($"\n {recipe.Name} ");
                 Console.WriteLine("   Requires:");
                 foreach (var id in recipe.RequiredGrocerieIds)
                 {
@@ -67,9 +62,10 @@ namespace FoodGame.KitchenLogic
 
         private void ShowInventory()
         {
-            Console.WriteLine($"\nGold: {_inventory.Gold} 🪙");
+            Console.Clear();
+            Console.WriteLine($"\nGold: {inventory.Gold} ");
 
-            if (_inventory.Groceries.Length == 0)
+            if (inventory.Groceries.Count == 0)
             {
                 Console.WriteLine("Inventory is empty.");
                 Console.WriteLine("(Press Enter to go back)");
@@ -77,9 +73,9 @@ namespace FoodGame.KitchenLogic
                 return;
             }
 
-            foreach (var g in _inventory.Groceries)
+            foreach (var g in inventory.Groceries)
             {
-                Console.WriteLine($"- {g.Name} ({g.Type})");
+                Console.WriteLine($"- {g.Name} )");
             }
 
             Console.WriteLine("\n(Press Enter to go back)");
@@ -88,53 +84,68 @@ namespace FoodGame.KitchenLogic
 
         private void CookDish()
         {
-            var craftable = RecipeCache.AllRecipes
-                .Where(recipe => recipe.RequiredGrocerieIds
-                    .All(id => _inventory.Groceries.Any(g => g.Id == id)))
-                .ToList();
-
-            if (!craftable.Any())
+            while (true)
             {
-                Console.WriteLine("\nYou don’t have ingredients for any recipes.");
-                return;
-            }
+                var craftable = RecipeCache.AllRecipes
+                    .Where(recipe => recipe.RequiredGrocerieIds
+                        .All(id => inventory.Groceries.Any(g => g.Id == id)))
+                    .ToList();
 
-            Console.WriteLine("\n--- Cookable Recipes ---");
-
-            for (int i = 0; i < craftable.Count; i++)
-            {
-                Console.WriteLine($"{i + 1}. {craftable[i].Name} → {craftable[i].Result}");
-            }
-
-            Console.WriteLine("\nEnter the number of the recipe to cook (or 'back'):");
-            Console.Write("> ");
-            var input = Console.ReadLine()?.Trim().ToLower();
-            if (input == "back") return;
-
-            if (int.TryParse(input, out int index) &&
-                index >= 1 && index <= craftable.Count)
-            {
-                var selected = craftable[index - 1];
-
-                
-                var list = _inventory.Groceries.ToList();
-                foreach (var id in selected.RequiredGrocerieIds)
+                if (!craftable.Any())
                 {
-                    var itemToRemove = list.FirstOrDefault(g => g.Id == id);
-                    if (itemToRemove != null) list.Remove(itemToRemove);
+                    Console.WriteLine("\nYou don’t have ingredients for any recipes.");
+                    return;
                 }
 
-                _inventory.Groceries = list.ToArray();
+                Console.Clear();
+                Console.WriteLine("\n--- Cookable Recipes ---");
 
-                
-                _inventory.AddGrocery(selected.ResultGrocerie);
+                for (int i = 0; i < craftable.Count; i++)
+                {
+                    Console.WriteLine($"{i + 1}. {craftable[i].Name} ");
+                }
 
-                Console.WriteLine($" You made: {selected.Result}! It has been added to your inventory.");
-            }
-            else
-            {
-                Console.WriteLine("Invalid input.");
+                Console.WriteLine("\nEnter the number of the recipe to cook (or 'back'):");
+                Console.Write("> ");
+                var input = Console.ReadLine()?.Trim().ToLower();
+                if (input == "back") return;
+
+                if (int.TryParse(input, out int index) && index >= 1 && index <= craftable.Count)
+                {
+                    var selected = craftable[index - 1];
+
+                    foreach (var id in selected.RequiredGrocerieIds)
+                    {
+                        var itemToRemove = inventory.Groceries.FirstOrDefault(g => g.Id == id);
+                        if (itemToRemove != null)
+                        {
+                            inventory.RemoveGrocery(itemToRemove);
+                        }
+                    }
+
+                    Console.Write("\nCooking");
+                    for (int i = 0; i < 5; i++)
+                    {
+                        Thread.Sleep(300);
+                        Console.Write(".");
+                    }
+                    Console.WriteLine(" Done!");
+
+                    inventory.AddBoughtGrocery(selected.ResultGrocerie);
+                    Console.WriteLine($"You made: {selected.Result}! It has been added to your inventory.");
+                    Console.WriteLine("\nPress Enter to continue...");
+                    Console.ReadLine();
+                }
+                else
+                {
+                    Console.WriteLine("Invalid input.");
+                    Thread.Sleep(1000);
+                }
             }
         }
+
+            
+        }
     }
-}
+
+

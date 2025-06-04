@@ -7,7 +7,7 @@ public class StoreCache
         new Store
         {
             Id = 1,  
-            Name = "Big Bernies Meat",  
+            Name = "Big Bernies Meat, Honey and Alcohol",  
             Type = StoreType.AmericanShop
         },
         new Store
@@ -27,7 +27,8 @@ public class StoreCache
             Id = 4,
             Name = "Fritz Bakery",
             Type = StoreType.BakeryShop
-        }
+        },
+    
         
 
            

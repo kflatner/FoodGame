@@ -6,4 +6,5 @@ public enum StoreType
     ItalianShop,
     AmericanShop,
     BakeryShop,
+    DishMerchant,
 }

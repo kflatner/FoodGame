@@ -1,0 +1,14 @@
+C:\Users\Meg\Desktop\Programering\portefolje-main\FoodGame\FoodGame\FoodGame\bin\Release\net9.0\win-x64\FoodGame.exe
+C:\Users\Meg\Desktop\Programering\portefolje-main\FoodGame\FoodGame\FoodGame\bin\Release\net9.0\win-x64\FoodGame.deps.json
+C:\Users\Meg\Desktop\Programering\portefolje-main\FoodGame\FoodGame\FoodGame\bin\Release\net9.0\win-x64\FoodGame.runtimeconfig.json
+C:\Users\Meg\Desktop\Programering\portefolje-main\FoodGame\FoodGame\FoodGame\bin\Release\net9.0\win-x64\FoodGame.dll
+C:\Users\Meg\Desktop\Programering\portefolje-main\FoodGame\FoodGame\FoodGame\bin\Release\net9.0\win-x64\FoodGame.pdb
+C:\Users\Meg\Desktop\Programering\portefolje-main\FoodGame\FoodGame\FoodGame\obj\Release\net9.0\win-x64\FoodGame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Meg\Desktop\Programering\portefolje-main\FoodGame\FoodGame\FoodGame\obj\Release\net9.0\win-x64\FoodGame.AssemblyInfoInputs.cache
+C:\Users\Meg\Desktop\Programering\portefolje-main\FoodGame\FoodGame\FoodGame\obj\Release\net9.0\win-x64\FoodGame.AssemblyInfo.cs
+C:\Users\Meg\Desktop\Programering\portefolje-main\FoodGame\FoodGame\FoodGame\obj\Release\net9.0\win-x64\FoodGame.csproj.CoreCompileInputs.cache
+C:\Users\Meg\Desktop\Programering\portefolje-main\FoodGame\FoodGame\FoodGame\obj\Release\net9.0\win-x64\FoodGame.dll
+C:\Users\Meg\Desktop\Programering\portefolje-main\FoodGame\FoodGame\FoodGame\obj\Release\net9.0\win-x64\refint\FoodGame.dll
+C:\Users\Meg\Desktop\Programering\portefolje-main\FoodGame\FoodGame\FoodGame\obj\Release\net9.0\win-x64\FoodGame.pdb
+C:\Users\Meg\Desktop\Programering\portefolje-main\FoodGame\FoodGame\FoodGame\obj\Release\net9.0\win-x64\FoodGame.genruntimeconfig.cache
+C:\Users\Meg\Desktop\Programering\portefolje-main\FoodGame\FoodGame\FoodGame\obj\Release\net9.0\win-x64\ref\FoodGame.dll

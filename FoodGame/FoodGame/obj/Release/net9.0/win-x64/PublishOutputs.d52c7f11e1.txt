@@ -1,0 +1,2 @@
+C:\Users\Meg\Desktop\Programering\portefolje-main\FoodGame\FoodGame\FoodGame\bin\Release\net9.0\win-x64\publish\FoodGame.pdb
+C:\Users\Meg\Desktop\Programering\portefolje-main\FoodGame\FoodGame\FoodGame\bin\Release\net9.0\win-x64\publish\FoodGame.exe

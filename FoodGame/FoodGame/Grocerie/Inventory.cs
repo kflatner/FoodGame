@@ -1,28 +1,32 @@
-using System.Collections;
-
-namespace FoodGame.Grocerie;
-
-public class Inventory
+namespace FoodGame.Grocerie
 {
-    public int Gold { get; set; }
-    
-    
-    
-    
-    public Grocerie[] Groceries { get; set; }
-
-    public void AddStarterItems()
+    public class Inventory
     {
-        Gold = 1000;
-        Groceries = GrocerieCache.AllGrocery.Where(item => item.IsStarterItem).ToArray();
-    }
+        public int Gold { get; set; }
 
-    public void AddGrocery(Grocerie grocerie)
-    {
-        var groceries = Groceries.ToList(); 
-        groceries.Add(grocerie);            
-        Groceries = groceries.ToArray();     
+        public List<Grocerie> Groceries { get; set; } = new List<Grocerie>();
+
+        public void AddStarterItems()
+        {
+            Gold = 1000;
+            Groceries = GrocerieCache.AllGrocery.Where(item => item.IsStarterItem).ToList();
+        }
+
+        public void AddBoughtGrocery(Grocerie grocerie)
+        {
+            Groceries.Add(grocerie);
+        }
+
+        public void RemoveGrocery(Grocerie grocerie)
+        {
+            Groceries.Remove(grocerie);
+        }
+
+        public void AddGrocery(Grocerie grocerie)
+        {
+            Groceries.Add(grocerie);
+        }
     }
-    
 }
+    
 

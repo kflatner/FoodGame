@@ -3,7 +3,7 @@ namespace FoodGame.Grocerie;
 public class Grocerie
 {
     public int Id { get; set; }  
-    public string Name { get; set; }  
+    public string Name { get; set; } = string.Empty; 
     public GrocerieType Type { get; set; }  
     public int Price { get; set; }  
     public int Quantity { get; set; } 
