@@ -28,6 +28,14 @@ public class StoreCache
             Name = "Fritz Bakery",
             Type = StoreType.BakeryShop
         },
+        new Store
+        {
+            Id = 5,
+            Name = "Andrew, The Dish Merchant",
+            Type = StoreType.DishMerchant,
+            Inventory = null
+           
+        }
     
         
 

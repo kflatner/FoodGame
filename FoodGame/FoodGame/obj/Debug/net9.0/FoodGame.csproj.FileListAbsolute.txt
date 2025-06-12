@@ -12,9 +12,7 @@ C:\Users\Meg\Desktop\Programering\Rider\Projects\FoodGame\FoodGame\obj\Debug\net
 C:\Users\Meg\Desktop\Programering\Rider\Projects\FoodGame\FoodGame\obj\Debug\net9.0\FoodGame.pdb
 C:\Users\Meg\Desktop\Programering\Rider\Projects\FoodGame\FoodGame\obj\Debug\net9.0\FoodGame.genruntimeconfig.cache
 C:\Users\Meg\Desktop\Programering\Rider\Projects\FoodGame\FoodGame\obj\Debug\net9.0\ref\FoodGame.dll
-C:\Users\Meg\Desktop\Programering\portefolje-main\FoodGame\FoodGame\FoodGame\bin\Debug\net9.0\FoodGame.exe
 C:\Users\Meg\Desktop\Programering\portefolje-main\FoodGame\FoodGame\FoodGame\bin\Debug\net9.0\FoodGame.deps.json
-C:\Users\Meg\Desktop\Programering\portefolje-main\FoodGame\FoodGame\FoodGame\bin\Debug\net9.0\FoodGame.runtimeconfig.json
 C:\Users\Meg\Desktop\Programering\portefolje-main\FoodGame\FoodGame\FoodGame\bin\Debug\net9.0\FoodGame.dll
 C:\Users\Meg\Desktop\Programering\portefolje-main\FoodGame\FoodGame\FoodGame\bin\Debug\net9.0\FoodGame.pdb
 C:\Users\Meg\Desktop\Programering\portefolje-main\FoodGame\FoodGame\FoodGame\obj\Debug\net9.0\FoodGame.GeneratedMSBuildEditorConfig.editorconfig
@@ -24,5 +22,4 @@ C:\Users\Meg\Desktop\Programering\portefolje-main\FoodGame\FoodGame\FoodGame\obj
 C:\Users\Meg\Desktop\Programering\portefolje-main\FoodGame\FoodGame\FoodGame\obj\Debug\net9.0\FoodGame.dll
 C:\Users\Meg\Desktop\Programering\portefolje-main\FoodGame\FoodGame\FoodGame\obj\Debug\net9.0\refint\FoodGame.dll
 C:\Users\Meg\Desktop\Programering\portefolje-main\FoodGame\FoodGame\FoodGame\obj\Debug\net9.0\FoodGame.pdb
-C:\Users\Meg\Desktop\Programering\portefolje-main\FoodGame\FoodGame\FoodGame\obj\Debug\net9.0\FoodGame.genruntimeconfig.cache
 C:\Users\Meg\Desktop\Programering\portefolje-main\FoodGame\FoodGame\FoodGame\obj\Debug\net9.0\ref\FoodGame.dll

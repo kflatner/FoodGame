@@ -1,72 +1,72 @@
+
+
 using FoodGame.Grocerie;
+using FoodGame.Station;
 
 namespace FoodGame.Store;
 
-public class Store
-{
-    public int Id { get; set; }
-    public string? Name { get; set; }
 
-    public StoreType Type { get; set; }
 
-    public class GetGroceries
+    public class Store
     {
-        public static void ShowGroceriesForStore(Store store, Inventory inventory)
+        public int Id { get; set; }
+        public string? Name { get; set; }
+        public StoreType Type { get; set; }
+        public Inventory Inventory { get; set; }
+        public List<Grocerie.Grocerie> Groceries
         {
-            while (true)
-            {
-                Console.WriteLine($"\nYou selected: {store.Name}");
-                Console.WriteLine("Available groceries:");
-
-                var groceriesInStore = GrocerieCache.AllGrocery
-                    .Where(g => g.StoreId == store.Id)
-                    .ToList();
-
-                if (!groceriesInStore.Any())
-                {
-                    Console.WriteLine("This store currently has no items.");
-                    return;
-                }
-
-                for (int i = 0; i < groceriesInStore.Count; i++)
-                {
-                    var g = groceriesInStore[i];
-                    Console.WriteLine($"{i + 1}. {g.Name}  - cost: {g.Price}");
-                }
-
-                Console.WriteLine("\nEnter the number of the grocery you'd like to buy (or type 'back' to return):");
-                Console.Write("> ");
-                var input = Console.ReadLine()?.Trim().ToLower();
-
-                if (input == "back") return;
-
-                if (int.TryParse(input, out int index) &&
-                    index >= 1 && index <= groceriesInStore.Count)
-                {
-                    var selected = groceriesInStore[index - 1];
-
-                    if (inventory.Gold >= selected.Price)
-                    {
-                        inventory.Gold -= selected.Price;
-                        inventory.AddGrocery(selected);
-                        Console.WriteLine($" You bought {selected.Name}! Remaining gold: {inventory.Gold}");
-                    }
-                    else
-                    {
-                        Console.WriteLine(" You can't afford that item.");
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("Invalid input.");
-                }
-                Console.WriteLine("\nPress Enter to continue shopping");
-                Console.ReadLine();
-            }
+            get { return GrocerieCache.AllGrocery
+                .Where(g => g.StoreId == Id)
+                .ToList(); }
         }
+
+
+    
+
+    public  List<Grocerie.Grocerie> GetDishesToSell()
+    {
+        return Inventory.Groceries
+            .Where(g => g.Type == GrocerieType.Dish)
+            .ToList();
+    }
+
+    // public  bool TryPurchase() //mye makt
+    // {
+    //     if (inventory.Gold >= item.Price)
+    //     {
+    //         inventory.Gold -= item.Price;
+    //         inventory.AddGrocery(item);
+    //         return true;
+    //     }
+    //
+    //     return false;
+    // }
+
+    public Grocerie.Grocerie Purchase(int id)
+    {
+        
+        return Groceries.FirstOrDefault(x=>x.Id==id);
+    }
+   
+
+
+    public static decimal GetSellPrice(Grocerie.Grocerie dish)
+    {
+        var recipe = RecipeCache.AllRecipes.FirstOrDefault(r => r.ResultGrocerie.Name == dish.Name);
+        return recipe?.CalculateSellPrice(GrocerieCache.AllGrocery.ToList()) ?? 0;
+    }
+
+    public void SellDish(Grocerie.Grocerie dish)
+    {
+        var price = GetSellPrice(dish);
+        Inventory.Gold += (int)price;
+        Inventory.RemoveGrocery(dish);
     }
 }
+    
 
+
+    
 
 
 
